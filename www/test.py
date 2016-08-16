@@ -5,8 +5,10 @@ def test(loop):
 	yield from orm.create_pool(loop=loop, user='root', password='123456', db='awesome')
 
 	# 对象里的属性可以任意指定，不必非要与数据库中字段对应，只不过若不对应，则会采用默认值
-	u = User(name='Test1', email='example5', passwd='1234567890', image='about:blank')
-	yield from u.save()
+	#u = User(name='Test2', email='example6', passwd='1234567890', image='about:blank')
+	#yield from u.save()
+	alluser = yield from User.findAll(orderBy='name DESC')
+	print(alluser)
 
 if __name__ == '__main__':
 
