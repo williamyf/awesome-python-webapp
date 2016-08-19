@@ -5,7 +5,9 @@ from coroweb import get, post
 
 @get('/')
 def index(request):
-	summary = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    summary='''Shit, The problem is just here! I got a run error when I started the app. It confuse me for a long time.
+    Eventually, I found it out by using a tool named "Beyond.Compare_2.4.3.243_SC-special.exe". With the tool I found a
+    hidden tab char. It cause the indentation error!'''
     blogs = [
         Blog(id='1', name='Test Blog', summary=summary, created_at=time.time()-120),
         Blog(id='2', name='Something New', summary=summary, created_at=time.time()-3600),
